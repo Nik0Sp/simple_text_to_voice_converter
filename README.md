@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1>Simple Text to Voice Converter</h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <strong>A simple React app that converts text to voice using the Web Speech API.</strong>
+</div>
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To use this text to voice converter app, follow these steps:
 
-### `npm start`
+1. Clone the repository: `git clone git@github.com:Nik0Sp/simple_text_to_voice_converter.git`
+2. Change directory to the project folder: `cd simple_text_to_voice_converter`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:3000` to use the text to voice converter.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Allows users to input text in a textarea.
+- Provides a dropdown to select the voice for speech synthesis.
+- Supports speech synthesis in multiple languages and accents.
+- Clicking the "Listen" button converts the text to voice using the selected voice.
+- Clicking the "Clear" button clears the text from the textarea.
 
-### `npm test`
+##  Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The main component of the text to voice converter is `App`, which handles the state and functionality of the app.
 
-### `npm run build`
+### App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `App` component is responsible for the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Fetches the available voices from the Web Speech API and sets them in the `voices` state.
+- Sets the first voice from the available voices as the default selected voice.
+- Handles the selection of the voice from the dropdown and updates the `selectedVoice` state.
+- Handles the input change in the textarea and updates the `text` state.
+- When the "Listen" button is clicked, creates a `SpeechSynthesisUtterance` object with the selected voice and text, and triggers speech synthesis.
+- When the "Clear" button is clicked, clears the text from the textarea.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##  Contributions
 
-### `npm run eject`
+Contributions to this project are welcome. If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##  License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use and modify the code as per the license terms.

@@ -35,6 +35,10 @@ function App() {
     }
   };
 
+  const handleClearClick = () => {
+    setText("");
+  };
+
   return (
     <div className="section">
       <h1 className="title">Simple Text to Voice Converter</h1>
@@ -52,7 +56,10 @@ function App() {
               </option>
             ))}
           </select>
-          <button onClick={handleListenClick}>Listen</button>
+          <div>
+            <button onClick={handleListenClick}>Listen</button>
+            <button onClick={handleClearClick}>Clear</button>
+          </div>
         </div>
       </div>
     </div>
