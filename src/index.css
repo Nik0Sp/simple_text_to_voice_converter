@@ -7,7 +7,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(70, 70, 70);
+  background: linear-gradient(248deg, rgba(0,0,0,1) 50%, rgba(238,162,8,0.9553960755813954) 50%);
   overflow: hidden;
   color: #fff;
 }
